@@ -1,0 +1,72 @@
+package PckCep;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Pacote do componente de gerenciamento de CEP'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  xmlrtl,
+  vcl,
+  dbrtl,
+  CustomIPTransport,
+  vclFireDAC,
+  FireDAC,
+  FireDACCommonDriver,
+  FireDACCommon,
+  bindengine,
+  FireDACMySQLDriver,
+  bindcomp,
+  IndyIPClient,
+  IndyIPCommon,
+  IndySystem,
+  IndyProtocols,
+  IndyCore,
+  RESTComponents,
+  DelphiAIDeveloper;
+
+contains
+  UCEP.Types in '..\Src\Types\UCEP.Types.pas',
+  UConnection.Interfaces in '..\Src\Interfaces\UConnection.Interfaces.pas',
+  UConfig.Interfaces in '..\Src\Interfaces\UConfig.Interfaces.pas',
+  UConnection in '..\Src\DB\UConnection.pas',
+  UConfig in '..\Src\DB\UConfig.pas',
+  UCEPPersistencia in '..\Src\DB\UCEPPersistencia.pas',
+  UCEPController in '..\Src\Controller\UCEPController.pas',
+  UCepService.XML in '..\Src\Service\UCepService.XML.pas',
+  UCepService.Json in '..\Src\Service\UCepService.Json.pas',
+  UCepService.Base in '..\Src\Service\UCepService.Base.pas',
+  UCEP in '..\Src\Model\UCEP.pas',
+  UCEP.Interfaces in '..\Src\Interfaces\UCEP.Interfaces.pas',
+  UCEPComponentManager in '..\Src\Manager\UCEPComponentManager.pas',
+  UUtils in '..\Src\Utils\UUtils.pas',
+  UValidation in '..\Src\Validation\UValidation.pas',
+  UValidation.Interfaces in '..\Src\Interfaces\UValidation.Interfaces.pas',
+  UCEPPersistencia.Interfaces in '..\Src\Interfaces\UCEPPersistencia.Interfaces.pas',
+  UCEPController.Interfaces in '..\Src\Interfaces\UCEPController.Interfaces.pas';
+
+end.
