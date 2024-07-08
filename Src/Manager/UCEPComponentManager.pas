@@ -198,7 +198,7 @@ begin
         LCEPPersistencia := TCEPPersistencia.Create(LConnection);
         Result           := TCEPController.create(LCEPPersistencia);
      except on E: Exception do
-          ShowMessage(E.Message);
+          raise
      end;
 end;
 
