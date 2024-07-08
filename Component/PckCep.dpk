@@ -46,8 +46,7 @@ requires
   IndySystem,
   IndyProtocols,
   IndyCore,
-  RESTComponents,
-  DelphiAIDeveloper;
+  RESTComponents;
 
 contains
   UCEP.Types in '..\Src\Types\UCEP.Types.pas',
